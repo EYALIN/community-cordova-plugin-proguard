@@ -1,33 +1,37 @@
 {
-  "name": "cordova-plugin-proguard",
-  "version": "2.2.0",
-  "description": "Cordova plugin for ProGuard",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/greybax/cordova-plugin-proguard.git"
+  "name": "community-cordova-plugin-proguard",
+  "version": "1.0.0",
+  "description": "Community Cordova ProGuard Plugin - Activates ProGuard and minification for Android builds",
+  "cordova": {
+    "id": "community-cordova-plugin-proguard",
+    "platforms": [
+      "android"
+    ]
   },
+  "readme": "README.md",
+  "repository": "EYALIN/community-cordova-plugin-proguard",
+  "homepage": "https://github.com/EYALIN/community-cordova-plugin-proguard",
+  "funding": "https://github.com/sponsors/EYALIN",
+  "bugs": "https://github.com/EYALIN/community-cordova-plugin-proguard/issues",
   "keywords": [
+    "cordova",
     "proguard",
     "android",
     "optimize",
     "shrink",
     "minify",
     "obfuscate",
-    "tool",
-    "cordova",
-    "plugin"
+    "r8",
+    "ecosystem:cordova",
+    "cordova-android"
   ],
-  "author": {
-    "name": "Aleksandr Filatov",
-    "email": "greybax@gmail.com",
-    "url": "https://alfilatov.com"
-  },
+  "author": "EYALIN",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/greybax/cordova-plugin-proguard/issues"
-  },
-  "homepage": "https://github.com/greybax/cordova-plugin-proguard#readme",
-  "devDependencies": {
-    "jshint": "2.13.6"
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">100"
+      }
+    }
   }
 }

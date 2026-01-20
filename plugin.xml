@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-proguard" version="2.2.0">
-  <name>Cordova plugin ProGuard</name>
-  <description>Activated ProGuard for Android</description>
+<!--
+  Licensed under MIT License
 
-  <platform name="android">
-    <framework src="build.gradle" custom="true" type="gradleReference" />
-    <asset src="proguard-custom.txt" target="proguard-custom.txt" />
-    <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
-  </platform>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="community-cordova-plugin-proguard"
+      version="1.0.0">
+    <name>Proguard</name>
+    <description>Community Cordova ProGuard Plugin - Activates ProGuard and minification for Android builds</description>
+    <license>MIT</license>
+    <keywords>cordova,proguard,android,optimize,shrink,minify,obfuscate</keywords>
+    <repo>https://github.com/EYALIN/community-cordova-plugin-proguard</repo>
+    <issue>https://github.com/EYALIN/community-cordova-plugin-proguard/issues</issue>
+
+    <platform name="android">
+        <framework src="build.gradle" custom="true" type="gradleReference" />
+        <asset src="proguard-custom.txt" target="proguard-custom.txt" />
+        <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
+    </platform>
 </plugin>
