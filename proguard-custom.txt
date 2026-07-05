@@ -177,3 +177,42 @@
 -dontwarn org.bouncycastle.jsse.**
 -dontwarn org.conscrypt.**
 -dontwarn org.openjsse.**
+
+# ============================================================
+# AdMob mediation partners + bundled SDKs (added for the mediation
+# upgrade). R8 fails on their optional/absent classes and can strip
+# reflectively-loaded ad/plugin classes; keep + suppress so release
+# minified builds neither fail nor crash at runtime in production.
+# ============================================================
+
+# --- Meta / Facebook Audience Network ---
+-keep class com.facebook.ads.** { *; }
+-dontwarn com.facebook.**
+
+# --- Vungle (Liftoff) ---
+-keep class com.vungle.** { *; }
+-dontwarn com.vungle.**
+
+# --- AppLovin ---
+-keep class com.applovin.** { *; }
+-dontwarn com.applovin.**
+
+# --- Google Mobile Ads + mediation adapters + UMP consent ---
+-keep class com.google.android.gms.ads.** { *; }
+-keep class com.google.ads.mediation.** { *; }
+-keep class com.google.android.ump.** { *; }
+-dontwarn com.google.android.gms.**
+-dontwarn com.google.ads.mediation.**
+
+# --- Google Play Billing + purchase plugin native ---
+-keep class com.android.billingclient.** { *; }
+-keep class cc.fovea.** { *; }
+
+# --- Firebase (Analytics / Crashlytics) ---
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**
+
+# --- Cordova core + all plugins (instantiated reflectively by class name) ---
+-keep class org.apache.cordova.** { *; }
+-keep public class * extends org.apache.cordova.CordovaPlugin
+-keep class com.community.cordova.** { *; }
