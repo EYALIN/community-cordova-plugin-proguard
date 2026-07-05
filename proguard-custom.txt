@@ -170,3 +170,10 @@
 }
 -keep class io.liteglue.** { *; }
 
+
+# okhttp3 optional TLS providers (pulled in transitively by AdMob mediation adapters
+# e.g. Vungle/AppLovin). These classes are optional and absent at runtime; suppress
+# the R8 missing-class errors so release/minified builds succeed.
+-dontwarn org.bouncycastle.jsse.**
+-dontwarn org.conscrypt.**
+-dontwarn org.openjsse.**

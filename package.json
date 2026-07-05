@@ -1,6 +1,6 @@
 {
   "name": "community-cordova-plugin-proguard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Community Cordova ProGuard Plugin - Activates ProGuard and minification for Android builds",
   "cordova": {
     "id": "community-cordova-plugin-proguard",

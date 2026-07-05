@@ -15,7 +15,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
       id="community-cordova-plugin-proguard"
-      version="1.0.0">
+      version="1.0.1">
     <name>Proguard</name>
     <description>Community Cordova ProGuard Plugin - Activates ProGuard and minification for Android builds</description>
     <license>MIT</license>
