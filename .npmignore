@@ -3,4 +3,5 @@
 ._*
 node_modules
 npm-debug.log
-cSpell.json
+cSpell.json.gradle/
+.idea/
